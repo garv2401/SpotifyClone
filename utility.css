@@ -1,0 +1,87 @@
+.border{
+    border:2px solid red;
+    margin: 4px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-centre{
+    justify-content: center;
+}
+
+.align-centre{
+    align-items: center;
+}
+
+.bg-black{
+    background-color: black;
+    color: white;
+}
+
+.invert{
+    filter:invert(1);
+}
+
+.bg-gray{
+    background-color: #121212;
+}
+
+.rounded{
+    border-radius: 7px;
+}
+
+.m-1{
+    margin:5px;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+/* Webkit-based browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+    border: 3px solid #2c2c2c; /* Padding around scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Color of the scrollbar thumb when hovered */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: #555 #2c2c2c; /* Color of the scrollbar thumb and track */
+}
+
+/* Edge, IE, and other browsers using the standard syntax */
+::-ms-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-ms-scrollbar-track {
+    background: #2c2c2c; /* Background of the scrollbar track */
+}
+
+::-ms-scrollbar-thumb {
+    background-color: #555; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+    border: 3px solid #2c2c2c; /* Padding around scrollbar thumb */
+}
+
+::-ms-scrollbar-thumb:hover {
+    background-color: #777; /* Color of the scrollbar thumb when hovered */
+}
+
+    

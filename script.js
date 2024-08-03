@@ -22,7 +22,9 @@ function convertSecondsToMinuteSeconds(seconds) {
 
 async function getSongs(folder){
     currFolder=folder;
-    let a=await fetch(`http://127.0.0.1:5500/Spotify/${folder}/`);
+    //https://github.com/garv2401/SpotifyClone/tree/main/songs
+    let a=await fetch(`https://github.com/garv2401/SpotifyClone/tree/main/${folder}/`);
+    //http://127.0.0.1:5500/Spotify/${folder}/
     let response=await a.text();
     //console.log(response);
 
@@ -133,7 +135,7 @@ const playMusic=(track,pause=false)=>{
 }
 
 async function displayAlbums(){
-    let a=await fetch(`http://127.0.0.1:5500/Spotify/songs/`);
+    let a=await fetch(`https://github.com/garv2401/SpotifyClone/tree/main/songs/`);
     let response=await a.text();
     //console.log(response);
 

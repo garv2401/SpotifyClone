@@ -23,7 +23,7 @@ function convertSecondsToMinuteSeconds(seconds) {
 async function getSongs(folder){
     currFolder=folder;
     //https://github.com/garv2401/SpotifyClone/tree/main/songs
-    let a=await fetch(`https://127.0.0.1:5500/Spotify/${folder}/`);
+    let a=await fetch(`./${folder}/`);
     //http://127.0.0.1:5500/Spotify/${folder}/
     let response=await a.text();
     //console.log(response);
@@ -106,7 +106,7 @@ async function getSongs(folder){
 const playMusic=(track,pause=false)=>{
     //let audio=new Audio("/Spotify/songs/"+track);
 
-    currSong.src=`/Spotify/${currFolder}/`+track;
+    currSong.src=`./${currFolder}/`+track;
     //console.log(`/Spotify/${currFolder}/`+track);
     if(!pause){
         currSong.play();
@@ -135,7 +135,7 @@ const playMusic=(track,pause=false)=>{
 }
 
 async function displayAlbums(){
-    let a=await fetch(`https://127.0.0.1:5500/Spotify/songs/`);
+    let a=await fetch(`./songs/`);
     let response=await a.text();
     //console.log(response);
 
@@ -151,7 +151,7 @@ async function displayAlbums(){
             let folder=e.href.split("/").slice(-1)[0];
             if(folder!="songs"){
 
-            let a=await fetch(`https://127.0.0.1:5500/Spotify/songs/${folder}/info.json`);
+            let a=await fetch(`./songs/${folder}/info.json`);
             let response=await a.json();
             
 
@@ -169,7 +169,7 @@ async function displayAlbums(){
                             </div>           
                             
                         </div>
-                        <img src="http://127.0.0.1:5500/Spotify/songs/${folder}/cover.jpg" alt="">
+                        <img src="./songs/${folder}/cover.jpg" alt="">
                         <h2>${response.title}</h2>
                         <p>${response.description}</p>
                     </div>`
